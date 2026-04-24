@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Pour YSYRAEL - Mon Amour de loin 🇫🇷❤️🇨🇲</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', 'Poppins', 'Dancing Script', system-ui, -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Drapeaux flottants responsive */
+        .flag {
+            position: fixed;
+            font-size: clamp(1.2rem, 5vw, 2rem);
+            pointer-events: none;
+            animation: floatFlag 12s linear forwards;
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        @keyframes floatFlag {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.8;
+            }
+            80% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-20vh) rotate(10deg);
+                opacity: 0;
+            }
+        }
+
+        /* Carte principale responsive */
+        .card {
+            position: relative;
+            z-index: 10;
+            max-width: 650px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(2px);
+            border-radius: clamp(1.5rem, 6vw, 2.5rem);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: fadeInUp 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* En-tête avec distance */
+        .hero {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1rem, 4vw, 2rem) clamp(2rem, 6vw, 3rem);
+            text-align: center;
+            color: #2c1810;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        .distance {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(0.5rem, 3vw, 1.5rem);
+            margin-bottom: 1rem;
+            font-size: clamp(0.9rem, 4vw, 1.2rem);
+            font-weight: bold;
+            flex-wrap: wrap;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.4rem, 6vw, 2rem);
+            margin-bottom: 0.5rem;
+            word-break: break-word;
+        }
+
+        .hero-sub {
+            font-style: italic;
+            font-size: clamp(0.8rem, 3.5vw, 1rem);
+            opacity: 0.9;
+        }
+
+        /* Contenu responsive */
+        .content {
+            padding: clamp(1.2rem, 5vw, 2.2rem);
+        }
+
+        .love-letter {
+            background: #fff5f0;
+            border-radius: clamp(1rem, 4vw, 1.8rem);
+            padding: clamp(1.2rem, 4vw, 1.8rem);
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #ff6b6b;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .love-letter p {
+            font-size: clamp(0.95rem, 4vw, 1.1rem);
+            line-height: 1.6;
+            color: #4a2a2a;
+            margin-bottom: 1rem;
+        }
+
+        .distance-counter {
+            background: linear-gradient(135deg, #667eea20, #764ba220);
+            border-radius: clamp(1.2rem, 5vw, 2rem);
+            padding: clamp(1rem, 4vw, 1.5rem);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .km-number {
+            font-size: clamp(1.3rem, 6vw, 2rem);
+            font-weight: bold;
+            color: #764ba2;
+        }
+
+        /* BOUTON VERS LE GROS COEUR */
+        .big-heart-btn {
+            display: block;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            border: none;
+            color: white;
+            font-size: clamp(1.1rem, 5vw, 1.4rem);
+            font-weight: bold;
+            padding: clamp(0.8rem, 4vw, 1.2rem) clamp(1rem, 5vw, 1.5rem);
+            border-radius: 3rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            text-decoration: none;
+            margin: 1rem 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite;
+        }
+
+        .big-heart-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 15px 30px rgba(255,75,43,0.4);
+            }
+        }
+
+        .special-note {
+            text-align: center;
+            font-size: clamp(0.75rem, 3.5vw, 0.9rem);
+            color: #888;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px dashed #ddd;
+        }
+
+        /* Responsive tableau */
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+            .love-letter p {
+                line-height: 1.5;
+            }
+            .distance {
+                gap: 0.8rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .card {
+                margin: 20px auto;
+            }
+        }
+
+        /* Touch friendly */
+        .big-heart-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="hero">
+        <div class="distance">
+            <span>🇫🇷 France</span>
+            <span>✈️💖✈️</span>
+            <span>🇨🇲 Cameroun</span>
+        </div>
+        <h1>✨ À toi, YSYRAEL ✨</h1>
+        <div class="hero-sub">Ma princesse, mon cœur traverse les kilomètres pour te rejoindre</div>
+    </div>
+    <div class="content">
+        <div class="love-letter">
+            <p>💌 <strong>Ma douce YSYRAEL,</strong></p>
+            <p>La distance entre la France et le Cameroun est de <strong id="distanceKm">~4 500 km</strong>, mais chaque kilomètre qui nous sépare rend mon amour pour toi encore plus fort. Tu es la lumière qui guide mes jours, même à des milliers de kilomètres.</p>
+            <p>YSYRAEL, ton prénom résonne dans mon cœur comme une mélodie douce. Chaque jour, chaque nuit, je me rapproche un peu plus de toi. Rien, ni l'océan, ni le temps, ne pourra jamais éteindre ce que je ressens pour toi.</p>
+            <p>Je te promets que bientôt, je serai à tes côtés pour ne plus jamais te quitter. En attendant, reçois tout l'amour que mon cœur peut contenir... et encore plus 💖</p>
+            <p style="text-align: right; margin-top: 1.5rem;"><strong>Ton amoureux, de France avec tout mon cœur ❤️</strong></p>
+        </div>
+
+        <div class="distance-counter">
+            <div>📏 Distance réelle :</div>
+            <div class="km-number">🌍 4 548 km d'océan</div>
+            <div style="font-size: clamp(0.7rem, 3vw, 0.85rem); margin-top: 8px;">💫 Distance entre nos cœurs : <strong>0 km</strong> (l'amour n'a pas de frontière) 💫</div>
+        </div>
+
+        <!-- BOUTON VERS LA PAGE DU GROS CŒUR I LOVE YOU -->
+        <a href="heart.html" class="big-heart-btn">
+            💖 CLIQUE ICI POUR MON GROS CŒUR 💖<br>
+            <span style="font-size: clamp(0.7rem, 3.5vw, 0.9rem);">⬇️ YSYRAEL, je t'aime énormément ⬇️</span>
+        </a>
+
+        <div class="special-note">
+            💕 Chaque fois que tu penses à moi, mon cœur bat plus fort 💕<br>
+            🇫🇷🤝🇨🇲
+        </div>
+    </div>
+</div>
+
+<script>
+    // Créer des drapeaux flottants France & Cameroun
+    function createFloatingFlag() {
+        const flag = document.createElement('div');
+        flag.classList.add('flag');
+        const isFrance = Math.random() > 0.5;
+        flag.innerHTML = isFrance ? '🇫🇷' : '🇨🇲';
+        flag.style.left = Math.random() * 100 + '%';
+        flag.style.bottom = '-30px';
+        flag.style.fontSize = (1.2 + Math.random() * 1.5) + 'rem';
+        flag.style.animationDuration = (6 + Math.random() * 8) + 's';
+        document.body.appendChild(flag);
+        setTimeout(() => flag.remove(), 12000);
+    }
+
+    // Générer des drapeaux en continu (adapté mobile)
+    for(let i = 0; i < 12; i++) {
+        setTimeout(() => createFloatingFlag(), i * 400);
+    }
+    setInterval(() => createFloatingFlag(), 3500);
+
+    // Animation du compteur de distance
+    const distanceSpan = document.getElementById('distanceKm');
+    if(distanceSpan) {
+        let km = 4548;
+        let display = 0;
+        const interval = setInterval(() => {
+            if(display < km) {
+                display += Math.ceil(km / 50);
+                if(display > km) display = km;
+                distanceSpan.innerText = `~${display.toLocaleString()} km`;
+            } else {
+                clearInterval(interval);
+            }
+        }, 30);
+    }
+
+    // Optimisation pour mobile : réduire les animations si nécessaire
+    if(window.innerWidth < 768) {
+        const flags = document.querySelectorAll('.flag');
+        // réduire le nombre de flags flottants en arrière-plan
+        setInterval(() => {
+            const existingFlags = document.querySelectorAll('.flag').length;
+            if(existingFlags > 15) {
+                const extraFlags = document.querySelectorAll('.flag');
+                for(let i = 0; i < extraFlags.length - 10; i++) {
+                    if(extraFlags[i]) extraFlags[i].remove();
+                }
+            }
+        }, 5000);
+    }
+</script>
+
+</body>
+</html>
